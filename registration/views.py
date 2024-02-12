@@ -37,5 +37,6 @@ def loginFunction(request):
 def home(request):
     return render(request,'home.html')
     
-    
+def logout(request):
+    return redirect('login')  
 # Create your views here.
