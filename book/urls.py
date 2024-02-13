@@ -1,10 +1,13 @@
 from . import views
-from logsignup.settings import DEBUG,STATIC_URL,STATIC_ROOT,MEDIA_ROOT,MEDIA_ROOT
+from django.urls import path
+from logsignup.settings import DEBUG,STATIC_URL,STATIC_ROOT,MEDIA_URL,MEDIA_ROOT
 
 from django.conf.urls.static import static
 
+
 urlpatterns = [
 	path('library',views.library,name='library'),
+    path('upload',views.upload,name='upload')
 ]
 
 if DEBUG:

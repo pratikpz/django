@@ -6,6 +6,7 @@ class Book(models.Model):
 	picture=models.ImageField()
 	author=models.CharField(max_length=30,default='guest')
 	email=models.EmailField(blank=True)
+	description = models.TextField(default="Available in LICT LIbrary")
  
 	def __str__(self):
 		return self.name
